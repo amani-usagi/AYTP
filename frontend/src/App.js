@@ -7,10 +7,10 @@ import { fab } from '@fortawesome/free-brands-svg-icons';
 import { faCheckSquare, faCoffee } from '@fortawesome/free-solid-svg-icons';
 
 import NavBar from "./components/NavBar";
-import Login from "./components/Login";
+import SignIn from "./views/auth/SignIn";
 import Home from "./components/Home";
-import AdminNav from "./components/AdminNav";
-import Signin from "./components/Signin";
+import AdminNav from "./components/Navbars/AdminNav";
+import SignUp from "./views/auth/SignUp";
 import Admin from "./components/Admin";
 import Testing from "./components/Testing";
 
@@ -19,7 +19,8 @@ function App() {
         <div className="App">
             <AdminNav />
             <Admin />
-            <Testing />
+            <SignIn />
+            <Home />
         </div>
     )
 }

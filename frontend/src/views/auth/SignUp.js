@@ -1,18 +1,19 @@
 import React from "react";
+import { Link } from "react-dom";
 
-function Login() {
+function SignUp() {
     return(
         <div className="min-h-screen flex items-center justify-center bg-gray-50 py-12 px-4 sm:px-6 lg:px-8">
             <div className="max-w-md w-full space-y-8">
                 <div>
                     <img className="mx-auto h-12 w-auto" src={process.env.PUBLIC_URL + "/assets/img/logos.svg"} alt="Elearn"/>
                     <h2 className="mt-6 text-center text-3xl font-extrabold text-gray-900">
-                        Create a new account!
+                        Sign Up
                     </h2>
                     <p className="mt-2 text-center text-sm text-gray-600">
-                        <a href="/" className="font-medium text-blue-600 hover:text-blue-500">
-                        Start your 14-day free trial
-                        </a>
+                        <Link href="/auth/SignIn" className="font-medium text-blue-600 hover:text-blue-500">
+                            Already have an account?
+                        </Link>
                     </p>
                 </div>
                 <form className="mt-8 space-y-6" action="#" method="POST">
@@ -69,4 +70,4 @@ function Login() {
         </div>
     )
 }
-export default Login;
+export default SignUp;
