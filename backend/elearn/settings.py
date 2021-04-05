@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     # Add newly created applications here
     'corsheaders',
     'rest_framework',
+    'mailerapp',
     'accounts',
 ]
 
@@ -156,3 +157,12 @@ CORS_ORIGIN_ALLOW_ALL = True
 FILE_UPLOAD_PERMISSIONS=0o640
 
 AUTH_USER_MODEL = 'accounts.UserAccount'
+
+# EMAIL SETUP
+EMAIL_BACKEND =  'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST    =  'smtp.gmail.com'
+EMAIL_USE_TLS =  True
+EMAIL_USE_SSL =  False
+EMAIL_PORT    =  587
+EMAIL_HOST_USER     = 'youraccoutname@gmail.com'
+EMAIL_HOST_PASSWORD = 'yoursecretpassword'
