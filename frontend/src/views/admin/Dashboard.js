@@ -2,21 +2,21 @@ import React from "react";
 
 // components
 
-import LineChart from "../../components/Cards/LineChart";
-import BarChart from "../../components/Cards/BarChart";
+import CardSchools from "../../components/Cards/CardSchools";
 
-function DashBoard() {
+export default function Dashboard() {
     return (
-        <>
-            <div className="flex flex-wrap">
-                <div className="w-full xl:w-8/12 mb-12 xl:mb-0 px-4">
-                    <LineChart />
-                </div>
-                <div className="w-full xl:w-4/12 px-4">
-                    <BarChart />
-                </div>
-            </div>
-        </>
+    <>
+    <div className="flex flex-wrap">
+        <div className="w-full xl:w-full mb-12 xl:mb-0 px-4">
+            <CardSchools />
+        </div>
+    </div>
+    <div className="flex flex-wrap mt-4">
+        <div className="w-full xl:w-full mb-12 xl:mb-0 px-4">
+            <CardSchools />
+        </div>
+    </div>
+    </>
     );
 }
-export default DashBoard;

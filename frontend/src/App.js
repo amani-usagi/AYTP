@@ -1,27 +1,26 @@
-import React from "react";
-import "./App.css";
-import {FaBeer} from 'react-icons/fa';
-import ReactDOM from 'react-dom';
-import { library } from '@fortawesome/fontawesome-svg-core';
-import { fab } from '@fortawesome/free-brands-svg-icons';
-import { faCheckSquare, faCoffee } from '@fortawesome/free-solid-svg-icons';
-
-import NavBar from "./components/NavBar";
-import SignIn from "./views/auth/SignIn";
-import Home from "./components/Home";
-import AdminNav from "./components/Navbars/AdminNav";
-import SignUp from "./views/auth/SignUp";
-import Admin from "./components/Admin";
-import Testing from "./components/Testing";
+import './App.css';
+import "@fortawesome/fontawesome-free/css/all.min.css";
+import FooterMini from "./components/Footers/FooterMini";
+import FooterMain from "./components/Footers/FooterMain";
+import AdminNavbar from "./components/Navbars/AdminNavbar";
+import TransNavbar from "./components/Navbars/TransNavbar";
+import Navbar from "./components/Navbars/Navbar";
+import Profile from "./views/Profile";
+import Schools from "./views/admin/Schools";
+import HeaderStats from "./components/Navbars/HeaderStats"
+import Login from "./views/auth/Login";
+import Register from "./views/auth/Register";
+import Dashbord from "./views/admin/Dashboard";
+import SideBar from "./components/Sidebars/SideBar";
+import Admin from "./layouts/Admin";
 
 function App() {
     return(
-        <div className="App">
-            <AdminNav />
-            <Admin />
-            <SignIn />
-            <Home />
-        </div>
+        <>
+        {/* <Profile /> */}
+        {/* <Schools /> */}
+        {/* <FooterMain /> */}
+        </>
     )
 }
 export default App;
