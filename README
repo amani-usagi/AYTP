@@ -1,0 +1,7 @@
+The AYTP Project is divided into 2 apps; Accounts and Elearn
+
+Accounts App contains all the info about users such as owners, teachers and students who are differentiated by their permisssions, as well as the register, login and logout functions
+
+Elearn App contains the main functionality for the online platform like Schools, Subject, Course, Module, Content, ItemBase, Text, File, Image, Video 
+
+See screenshots and file contents for more info
