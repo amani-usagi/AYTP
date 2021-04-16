@@ -4,4 +4,8 @@ Accounts App contains all the info about users such as owners, teachers and stud
 
 Elearn App contains the main functionality for the online platform like Schools, Subject, Course, Module, Content, ItemBase, Text, File, Image, Video 
 
+Aytp directory contais the project settings and other config info
+
+The backend directory was removed as it was causing conflicts, however the frontend directory still remains
+
 See screenshots and file contents for more info
