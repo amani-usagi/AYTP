@@ -8,4 +8,7 @@ Aytp directory contais the project settings and other config info
 
 The backend directory was removed as it was causing conflicts, however the frontend directory still remains
 
+To test the application, clone or download the repo to your machine. Navigate to the directory using either your terminal emulator or code editor and in the shell prompt type: Python3 runserver
+Then open your browser to 127.0.0.1:8000/ then use the necessary links specified in the urls.py to view functions
+
 See screenshots and file contents for more info
