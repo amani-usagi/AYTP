@@ -25,8 +25,8 @@ const UserDropdown = () => {
             </div>
         </a>
         <div ref={popoverDropdownRef} className={(dropdownPopoverShow ? "block " : "hidden ") + "bg-white text-base z-50 float-left py-2 list-none text-left rounded shadow-lg min-w-48"}>
-            <Link to="/profile" className={ "text-sm py-2 px-4 font-semibold block w-full whitespace-nowrap bg-transparent text-gray-700"} onClick={(e) => e.preventDefault()}>
-                <i class="fa fa-user-circle mr-2 " aria-hidden="true"></i> Profile
+            <Link className="text-sm py-2 px-4 font-semibold block w-full whitespace-nowrap bg-transparent text-gray-700" to="/profile">
+                <i className="fas fa-user-circle text-blueGray-400 mr-2 text-sm"></i>{" "} Profile
             </Link>
             <a href="/" className={ "text-sm py-2 px-4 font-semibold block w-full whitespace-nowrap bg-transparent text-gray-700"} onClick={(e) => e.preventDefault()} >
                 <i class="fas fa-toolbox mr-2"></i> Action
