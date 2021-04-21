@@ -6,7 +6,7 @@ export default function Register() {
     <>
     <div className="container mx-auto px-4 h-full">
         <div className="flex content-center items-center justify-center h-full">
-            <div className="w-full lg:w-6/12 px-4">
+            <div className="w-full lg:w-5/12 px-4">
                 <div className="relative flex flex-col min-w-0 break-words w-full mb-6 shadow-lg rounded-lg bg-gray-200 border-0">
                     <div className="rounded-t mb-0 px-6 py-6">
                         <div className="text-center mb-3">
@@ -25,7 +25,7 @@ export default function Register() {
                         <hr className="mt-6 border-b-1 border-gray-300" />
                     </div>
                     <div className="flex-auto px-4 lg:px-10 py-10 pt-0">
-                        <div className="text-gray-400 text-center mb-3 font-bold">
+                        <div className="text-gray-500 text-center mb-3 font-bold">
                             <small>Or sign up with credentials</small>
                         </div>
                         <form>
@@ -72,7 +72,7 @@ export default function Register() {
                 </div>
                 <div className="flex flex-wrap mt-6 relative justify-center">
                     <Link to="/auth/login" className="italic font-bold">
-                        <small className="text-gray-400">Already have an account? </small>
+                        <small className="text-gray-500">Already have an account? </small>
                         <small className="text-blue-500">Sign in</small>
                     </Link>
                 </div>

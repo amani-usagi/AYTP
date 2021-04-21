@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-// import NotificationDropdown from "components/Dropdowns/NotificationDropdown.js";
+import NotificationDropdown from "../Dropdowns/Notification";
 import UserDropdown from "../Dropdowns/UserDropdown";
 
 export default function Sidebar() {
@@ -18,7 +18,7 @@ export default function Sidebar() {
             </Link>
             <ul className="md:hidden items-center flex flex-wrap list-none">
                 <li className="inline-block relative">
-                    <UserDropdown />
+                    <NotificationDropdown />
                 </li>
                 <li className="inline-block relative">
                     <UserDropdown />

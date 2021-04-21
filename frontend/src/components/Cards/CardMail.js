@@ -1,5 +1,8 @@
 import React from "react";
 
+import { CKEditor } from '@ckeditor/ckeditor5-react';
+import ClassicEditor from '@ckeditor/ckeditor5-build-classic';
+
 export default function CardMail() {
     return (
     <>
@@ -50,7 +53,9 @@ export default function CardMail() {
                 <div className="flex flex-wrap">
                     <div className="w-full lg:w-12/12 px-4">
                         <div className="relative w-full mb-3">
-                        <textarea type="text" className="border-0 px-3 py-3 placeholder-gray-300 text-gray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150" rows="6"></textarea>
+                        <div type="text" className="border-0 px-3 py-3 placeholder-gray-300 text-gray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150" rows="6">
+                            <CKEditor editor={ClassicEditor} />
+                        </div>
                         </div>
                     </div>
                 </div>

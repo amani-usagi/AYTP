@@ -1,6 +1,6 @@
 import React from "react";
 
-import Navbar from "../components/Navbars/NavBar";
+import Navbar from "../components/Navbars/Navbar";
 import TransFooter from "../components/Footers/TransFooter";
 
 export default function Landing() {

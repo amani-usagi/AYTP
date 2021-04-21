@@ -25,19 +25,24 @@ export default function TransNavbar(props) {
                         </a>
                     </li>
                     <li className="flex items-center">
-                        <a className="hover:text-gray-700 text-black px-3 py-4 lg:py-2 flex items-center text-xs  font-bold" href="/" target="_blank" >
-                            <p className="text-sm inline-block ml-2">Explore</p>
-                        </a>
+                        <Link className="hover:text-gray-900 text-gray-500 px-3 py-4 lg:py-2 flex items-center text-xs  font-bold" to="/admin/dashboard"  >
+                            <p className="text-sm inline-block ml-2">Admin</p>
+                        </Link>
                     </li>
                     <li className="flex items-center">
-                        <a className="hover:text-gray-700 text-black px-3 py-4 lg:py-2 flex items-center text-xs  font-bold" href="/" target="_blank" >
-                            <p className="text-sm inline-block ml-2">Courses</p>
-                        </a>
+                        <Link className="hover:text-gray-900 text-gray-500 px-3 py-4 lg:py-2 flex items-center text-xs  font-bold" to="/student/index" >
+                            <p className=" text-sm inline-block ml-2">Students</p>
+                        </Link>
+                    </li>
+                    <li className="flex items-center border-r-2 border-black">
+                        <Link to="/auth/login" className="hover:text-gray-900 text-gray-500 px-3 py-4 lg:py-2 flex items-center text-xs font-bold">
+                            <i class="fas fa-sign-in-alt mr-2"></i> Sign In
+                        </Link>
                     </li>
                     <li className="flex items-center">
-                        <button className="bg-blue-500 text-white active:bg-gray-50 text-xs font-bold uppercase px-4 py-2 rounded shadow hover:shadow-md outline-none focus:outline-none lg:mr-1 lg:mb-0 ml-3 mb-3 ease-linear transition-all duration-150" type="button" >
-                            <i class="fa fa-file" aria-hidden="true"></i> Blog
-                        </button>
+                        <Link to="/auth/register" className="hover:text-gray-900 text-gray-500 px-3 py-4 lg:py-2 flex items-center text-xs  font-bold">
+                            <i class="fa fa-user-plus mr-2" aria-hidden="true"></i>Register
+                        </Link>
                     </li>
                 </ul>
             </div>
