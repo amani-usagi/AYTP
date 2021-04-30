@@ -18,7 +18,7 @@ class SignupView(APIView):
         
         if password == cpassword:
             if User.objects.filter(email=email).exists():
-                return Response({'error': 'Email already exists'})
+                return Response({'error': 'User email already exists'})
             else:
                 if len(password) < 8:
                     return Response({'error': 'Password must be at least 8 characters long!'})

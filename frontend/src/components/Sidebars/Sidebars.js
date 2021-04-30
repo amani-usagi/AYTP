@@ -14,7 +14,7 @@ export default function Sidebar() {
                 <i className="fas fa-bars"></i>
             </button>
             <Link className="md:block text-left md:pb-2 text-gray-500 mr-0 inline-block whitespace-nowrap text-sm uppercase font-bold p-4 px-0" to="/student/index">
-                Dashboard
+                Student Dashboard
             </Link>
             <ul className="md:hidden items-center flex flex-wrap list-none">
                 <li className="inline-block relative">
@@ -25,7 +25,7 @@ export default function Sidebar() {
                 </li>
             </ul>
             <hr className="my-4 md:min-w-full" />
-            <button className="w-full bg-blue-500 text-white cta-btn font-semibold py-2 mt-5 rounded-br-lg rounded-bl-lg rounded-tr-lg shadow-lg hover:shadow-xl hover:bg-gray-500 flex items-center justify-center">
+            <button className="w-full bg-blue-500 text-white cta-btn font-semibold py-2 mt-5 rounded-br-lg rounded-bl-lg rounded-tr-lg shadow-lg hover:shadow-xl hover:bg-blue-900 flex items-center justify-center">
                 <i className="fas fa-plus mr-3"></i> Enroll new course
             </button>
             <div className={ "md:flex md:flex-col md:items-stretch md:opacity-100 md:relative md:mt-4 md:shadow-none shadow absolute top-0 left-0 right-0 z-40 overflow-y-auto overflow-x-hidden h-auto items-center flex-1 rounded " + collapseShow }>
@@ -45,7 +45,7 @@ export default function Sidebar() {
                 </div>
                 <form className="mt-6 mb-4 md:hidden">
                     <div className="mb-3 pt-0">
-                        <input type="text" placeholder="Search..." className="border-0 px-3 py-2 h-12 border-solid  border-gray-500 placeholder-gray-300 text-gray-500 bg-white rounded text-base leading-snug shadow-none outline-none focus:outline-none w-full font-normal"/>
+                        <input type="text" placeholder="Search..." className="border-1 px-3 py-2 h-12 border-solid  border-gray-500 placeholder-gray-300 text-gray-500 bg-white rounded text-base leading-snug shadow-none outline-none focus:outline-none w-full font-normal"/>
                     </div>
                 </form>
                 <hr className="my-4 md:min-w-full" />
@@ -57,9 +57,9 @@ export default function Sidebar() {
                         </Link>
                     </li>
                     <li className="my-2 md:my-0">
-                        <Link className={ "flex items-center py-4 pl-6 nav-item " + (window.location.href.indexOf("/student/chart") !== -1 ? "text-blue-500 hover:text-blue-500" : "text-gray-700 hover:text-gray-500") } to="/student/chart">
-                            <i className={ "fa fa-chart-area mr-3 text-sm " + (window.location.href.indexOf("/student/chart") !== -1 ? "opacity-75" : "text-gray-500") } ></i>{" "}
-                            <span className="w-full inline-block pb-1 md:pb-0 text-sm">Analytics</span>
+                        <Link className={ "flex items-center py-4 pl-6 nav-item " + (window.location.href.indexOf("/student/courses") !== -1 ? "text-blue-500 hover:text-blue-500" : "text-gray-700 hover:text-gray-500") } to="/student/courses">
+                            <i className={ "fa fa-graduation-cap mr-3 text-sm " + (window.location.href.indexOf("/student/courses") !== -1 ? "opacity-75" : "text-gray-500") } ></i>{" "}
+                            <span className="w-full inline-block pb-1 md:pb-0 text-sm">Courses</span>
                         </Link>
                     </li>
                     <li className="my-2 md:my-0">

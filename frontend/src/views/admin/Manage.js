@@ -2,7 +2,7 @@ import React from "react";
 
 // components
 
-import CardManage from "../../components/Cards/CardManage";
+import CardManage from "../../components/Cards/AdminCards/CardManage";
 
 export default function Manage() {
     return (

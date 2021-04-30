@@ -60,7 +60,7 @@ ROOT_URLCONF = 'elearn.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [os.path.join(BASE_DIR, 'build')],
+        'DIRS': [os.path.join(BASE_DIR, 'build')], #for react frontend template
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -82,7 +82,7 @@ WSGI_APPLICATION = 'elearn.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'postgres',
+        'NAME': 'aytp_project',
         'USER': 'postgres',
         'PASSWORD': '123',
         'HOST': 'localhost'

@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 
 // components
 
-import TableDropdown from "../Dropdowns/TableDropdown";
+import TableDropdown from "../../Dropdowns/TableDropdown";
 
 export default function CardSchools({ color }) {
 	return (
@@ -45,7 +45,7 @@ export default function CardSchools({ color }) {
 				<tbody>
 					<tr>
 						<th className="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 text-left flex items-center">
-							<img src={require("../../assets/img/bprofile.svg").default} className="h-12 w-12 bg-white rounded-full border" alt="..." ></img>{" "}
+							<img src={require("../../../assets/img/bprofile.svg").default} className="h-12 w-12 bg-white rounded-full border" alt="..." ></img>{" "}
 							<span className={ "ml-3 font-bold " + + (color === "light" ? "text-gray-600" : "text-white") } >
 									Argon Design School
 							</span>
@@ -58,9 +58,9 @@ export default function CardSchools({ color }) {
 						</td>
 						<td className="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4">
 							<div className="flex">
-								<img src={require("../../assets/img/bprofile.svg").default} alt="..." className="w-10 h-10 rounded-full border-2 border-gray-50 shadow"></img>
-								<img src={require("../../assets/img/bprofile.svg").default} alt="..." className="w-10 h-10 rounded-full border-2 border-gray-50 shadow"></img>
-								<img src={require("../../assets/img/bprofile.svg").default} alt="..." className="w-10 h-10 rounded-full border-2 border-gray-50 shadow"></img>
+								<img src={require("../../../assets/img/bprofile.svg").default} alt="..." className="w-10 h-10 rounded-full border-2 border-gray-50 shadow"></img>
+								<img src={require("../../../assets/img/bprofile.svg").default} alt="..." className="w-10 h-10 rounded-full border-2 border-gray-50 shadow"></img>
+								<img src={require("../../../assets/img/bprofile.svg").default} alt="..." className="w-10 h-10 rounded-full border-2 border-gray-50 shadow"></img>
 							</div>
 						</td>
 						<td className="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4">
@@ -79,7 +79,7 @@ export default function CardSchools({ color }) {
 					</tr>
 					<tr>
 						<th className="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 text-left flex items-center">
-							<img src={require("../../assets/img/bprofile.svg").default} className="h-12 w-12 bg-white rounded-full border" alt="..." ></img>{" "}
+							<img src={require("../../../assets/img/bprofile.svg").default} className="h-12 w-12 bg-white rounded-full border" alt="..." ></img>{" "}
 							<span className={ "ml-3 font-bold " + + (color === "light" ? "text-gray-600" : "text-white") } >
 								Angular Design School
 							</span>
@@ -92,7 +92,7 @@ export default function CardSchools({ color }) {
 						</td>
 						<td className="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4">
 							<div className="flex">
-								<img src={require("../../assets/img/bprofile.svg").default} alt="..." className="w-10 h-10 rounded-full border-2 border-gray-50 shadow"></img>
+								<img src={require("../../../assets/img/bprofile.svg").default} alt="..." className="w-10 h-10 rounded-full border-2 border-gray-50 shadow"></img>
 							</div>
 						</td>
 						<td className="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4">
@@ -111,7 +111,7 @@ export default function CardSchools({ color }) {
 					</tr>
 					<tr>
 						<th className="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 text-left flex items-center">
-							<img src={require("../../assets/img/bprofile.svg").default} className="h-12 w-12 bg-white rounded-full border" alt="..." ></img>{" "}
+							<img src={require("../../../assets/img/bprofile.svg").default} className="h-12 w-12 bg-white rounded-full border" alt="..." ></img>{" "}
 							<span className={ "ml-3 font-bold " + + (color === "light" ? "text-gray-600" : "text-white") } >
 								React Design School
 							</span>
@@ -124,9 +124,9 @@ export default function CardSchools({ color }) {
 						</td>
 						<td className="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4">
 							<div className="flex">
-								<img src={require("../../assets/img/bprofile.svg").default} alt="..." className="w-10 h-10 rounded-full border-2 border-gray-50 shadow"></img>
-								<img src={require("../../assets/img/bprofile.svg").default} alt="..." className="w-10 h-10 rounded-full border-2 border-gray-50 shadow"></img>
-								<img src={require("../../assets/img/bprofile.svg").default} alt="..." className="w-10 h-10 rounded-full border-2 border-gray-50 shadow"></img>
+								<img src={require("../../../assets/img/bprofile.svg").default} alt="..." className="w-10 h-10 rounded-full border-2 border-gray-50 shadow"></img>
+								<img src={require("../../../assets/img/bprofile.svg").default} alt="..." className="w-10 h-10 rounded-full border-2 border-gray-50 shadow"></img>
+								<img src={require("../../../assets/img/bprofile.svg").default} alt="..." className="w-10 h-10 rounded-full border-2 border-gray-50 shadow"></img>
 							</div>
 						</td>
 						<td className="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4">

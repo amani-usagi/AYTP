@@ -5,7 +5,7 @@ import { Switch, Route, Redirect } from "react-router-dom";
 
 import AdminNavbar from "../components/Navbars/AdminNavbar";
 import SideBar from "../components/Sidebars/SideBar";
-import HeaderStats from "../components/Navbars/HeaderStats";
+import HeaderStats from "../components/Headers/HeaderStats";
 import TransFooter from "../components/Footers/TransFooter";
 
 // views

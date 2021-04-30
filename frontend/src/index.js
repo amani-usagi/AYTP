@@ -14,6 +14,7 @@ import Student from "./layouts/Student";
 // Other Views
 import Landing from "./views/Landing";
 import Profile from "./views/Profile";
+import Pricing from "./views/Pricing";
 
 
 ReactDOM.render(
@@ -24,6 +25,7 @@ ReactDOM.render(
 			<Route path="/admin" component={Admin} />
 			<Route path="/" exact component={Landing} />
 			<Route path="/profile" exact component={Profile} />
+			<Route path="/pricing" exact component={Pricing} />
 			<Redirect from="*" to="/" />
 		</Switch>
 	</BrowserRouter>,

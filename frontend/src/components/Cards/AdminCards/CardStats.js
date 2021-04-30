@@ -16,7 +16,7 @@ export default function CardStats({
                     <h5 className="text-gray-400 uppercase font-bold text-xs">
                         {statSubtitle}
                     </h5>
-                    <span className="font-semibold text-xl text-blueGray-700">
+                    <span className="font-semibold text-xl text-gray-700">
                         {statTitle}
                     </span>
                 </div>

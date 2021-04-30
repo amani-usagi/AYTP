@@ -2,12 +2,12 @@ import React from "react";
 
 import FooterMini from "../components/Footers/FooterMini";
 import Background from "../assets/img/background.svg";
-import TransNavbar from "../components/Navbars/TransNavbar";
+import Navbar from "../components/Navbars/Navbar";
 
 function Profile() {
     return(
         <>
-        <TransNavbar />
+        <Navbar />
             <main className="profile-page">
                 <section className="relative pt-96 block h-500-px">
                     <div className="absolute top-0 w-full h-full bg-center bg-cover" style={{ backgroundImage: "url(" + {Background} + ")",}}>

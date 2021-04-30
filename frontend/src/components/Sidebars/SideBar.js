@@ -10,7 +10,7 @@ export default function Sidebar() {
     <>
     <nav className="md:left-0 md:block md:fixed md:top-0 md:bottom-0 md:overflow-y-auto md:flex-row md:flex-nowrap md:overflow-hidden shadow-xl bg-white flex flex-wrap items-center justify-between relative md:w-64 z-10 py-4 px-6">
         <div className="md:flex-col md:items-stretch md:min-h-full md:flex-nowrap px-0 flex flex-wrap items-center justify-between w-full mx-auto">
-            <button className="cursor-pointer text-black opacity-50 md:hidden px-3 py-1 text-xl leading-none bg-transparent rounded border border-solid border-transparent" type="button" onClick={() => setCollapseShow("bg-white m-2 py-3 px-6")}>
+            <button className="cursor-pointer text-black opacity-50 md:hidden px-3 py-1 text-xl leading-none bg-transparent rounded border border-solid border-transparent" type="button" onClick={() => setCollapseShow("bg-white m-2 py-3 pl-6  px-6")}>
                 <i className="fas fa-bars"></i>
             </button>
             <Link className="md:block text-left md:pb-2 text-gray-500 mr-0 inline-block whitespace-nowrap text-sm uppercase font-bold p-4 px-0" to="/admin/dashboard">
@@ -28,7 +28,7 @@ export default function Sidebar() {
                 <div className="md:min-w-full md:hidden block pb-4 mb-4 border-b border-solid border-gray-200">
                     <div className="flex flex-wrap">
                         <div className="w-6/12">
-                            <Link className="md:block text-left md:pb-2 text-gray-500 mr-0 inline-block whitespace-nowrap text-sm uppercase font-bold p-4 px-0" to="/admin/dashboard">
+                            <Link className="md:block text-left md:pb-2 text-gray-500 mr-0 inline-block whitespace-nowrap text-sm  font-bold p-4 px-0" to="/admin/dashboard">
                                 Administrator
                             </Link>
                         </div>
@@ -45,48 +45,42 @@ export default function Sidebar() {
                     </div>
                 </form>
                 <hr className="my-4 md:min-w-full" />
-                <h6 className="md:min-w-full text-gray-500 text-xs uppercase font-bold block pt-1 pb-4 no-underline">
-                    Admin Functions
-                </h6>
                 <ul className="md:flex-col md:min-w-full flex flex-col list-none">
-                    <li className="items-center">
-                        <Link className={ "text-xs uppercase py-3 font-bold block " + (window.location.href.indexOf("/admin/dashboard") !== -1 ? "text-blue-500 hover:text-blue-500" : "text-gray-700 hover:text-gray-500") } to="/admin/dashboard">
+                    <li className="my-2 md:my-0">
+                        <Link className={ "flex items-center py-3 pl-6  text-xs font-semibold " + (window.location.href.indexOf("/admin/dashboard") !== -1 ? "text-blue-500 hover:text-blue-500" : "text-gray-700 hover:text-gray-500") } to="/admin/dashboard">
                             <i className={ "fas fa-tachometer-alt mr-2 text-sm " + (window.location.href.indexOf("/admin/dashboard") !== -1 ? "opacity-75" : "text-gray-500") } ></i>{" "}
                             Dashboard
                         </Link>
                     </li>
-                    <li className="items-center">
-                        <Link className={ "text-xs uppercase py-3 font-bold block " + (window.location.href.indexOf("/admin/schools") !== -1 ? "text-blue-500 hover:text-blue-500" : "text-gray-700 hover:text-gray-500") } to="/admin/schools">
+                    <li className="my-2 md:my-0">
+                        <Link className={ "flex items-center py-3 pl-6  text-xs font-semibold " + (window.location.href.indexOf("/admin/schools") !== -1 ? "text-blue-500 hover:text-blue-500" : "text-gray-700 hover:text-gray-500") } to="/admin/schools">
                             <i className={ "fas fa-school mr-2 text-sm " + (window.location.href.indexOf("/admin/schools") !== -1 ? "opacity-75" : "text-gray-500") } ></i>{" "}
                                 Schools
                         </Link>
                     </li>
-                    <li className="items-center">
-                        <Link className={ "text-xs uppercase py-3 font-bold block " + (window.location.href.indexOf("/admin/mail") !== -1 ? "text-blue-500 hover:text-blue-500" : "text-gray-700 hover:text-gray-500") } to="/admin/mail">
+                    <li className="my-2 md:my-0">
+                        <Link className={ "flex items-center py-3 pl-6  text-xs font-semibold " + (window.location.href.indexOf("/admin/mail") !== -1 ? "text-blue-500 hover:text-blue-500" : "text-gray-700 hover:text-gray-500") } to="/admin/mail">
                             <i className={ "fa fa-envelope mr-2 text-sm " + (window.location.href.indexOf("/admin/mail") !== -1 ? "opacity-75" : "text-gray-500") } ></i>{" "}
                             Mails
                         </Link>
                     </li>
-                    <li className="items-center">
-                        <Link className={ "text-xs uppercase py-3 font-bold block " + (window.location.href.indexOf("/admin/manage") !== -1 ? "text-blue-500 hover:text-blue-500" : "text-gray-700 hover:text-gray-500") } to="/admin/manage">
+                    <li className="my-2 md:my-0">
+                        <Link className={ "flex items-center py-3 pl-6  text-xs font-semibold " + (window.location.href.indexOf("/admin/manage") !== -1 ? "text-blue-500 hover:text-blue-500" : "text-gray-700 hover:text-gray-500") } to="/admin/manage">
                             <i className={ "fa fa-tools mr-2 text-sm " + (window.location.href.indexOf("/admin/manage") !== -1 ? "opacity-75" : "text-gray-500") } ></i>{" "}
                             Manage
                         </Link>
                     </li>
                 </ul>
                 <hr className="my-4 md:min-w-full" />
-                <h6 className="md:min-w-full text-gray-500 text-xs uppercase font-bold block pt-1 pb-4 no-underline">
-                    Admin Profile
-                </h6>
                 <ul className="md:flex-col md:min-w-full flex flex-col list-none">
-                    <li className="items-center">
-                        <Link className={ "text-xs uppercase py-3 font-bold block " + (window.location.href.indexOf("/admin/profile") !== -1 ? "text-blue-500 hover:text-blue-500" : "text-gray-700 hover:text-gray-500") } to="/admin/profile">
+                    <li className="my-2 md:my-0">
+                        <Link className={ "flex items-center py-3 pl-6  text-xs font-semibold " + (window.location.href.indexOf("/admin/profile") !== -1 ? "text-blue-500 hover:text-blue-500" : "text-gray-700 hover:text-gray-500") } to="/admin/profile">
                             <i className={ "fas fa-user mr-2 text-sm " + (window.location.href.indexOf("/admin/profile") !== -1 ? "opacity-75" : "text-gray-500") } ></i>{" "}
                             Profile
                         </Link>
                     </li>
-                    <li className="items-center">
-                        <Link className={ "text-xs uppercase py-3 font-bold block " + (window.location.href.indexOf("/admin/settings") !== -1 ? "text-blue-500 hover:text-blue-500"  : "text-gray-700 hover:text-gray-500") } to="/admin/settings" >
+                    <li className="my-2 md:my-0">
+                        <Link className={ "flex items-center py-3 pl-6  text-xs font-semibold " + (window.location.href.indexOf("/admin/settings") !== -1 ? "text-blue-500 hover:text-blue-500"  : "text-gray-700 hover:text-gray-500") } to="/admin/settings" >
                             <i className={ "fas fa-cog mr-2 text-sm " + (window.location.href.indexOf("/admin/settings") !== -1 ? "opacity-75" : "text-gray-500") } ></i>{" "}
                             Settings
                         </Link>

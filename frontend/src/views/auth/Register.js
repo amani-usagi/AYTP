@@ -63,7 +63,7 @@ export default function Register() {
                                 </label>
                             </div>
                             <div className="text-center mt-6">
-                                <button className="bg-blue-800 text-white active:bg-gray-600 text-sm font-bold uppercase px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 w-full ease-linear transition-all duration-150" type="button">
+                                <button className="bg-blue-500 hover:bg-blue-900 text-white active:bg-gray-600 text-sm font-bold uppercase px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 w-full ease-linear transition-all duration-150" type="button">
                                     Create Account
                                 </button>
                             </div>

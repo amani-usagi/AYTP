@@ -2,7 +2,7 @@ import React from "react";
 
 // components
 
-import CardSchools from "../../components/Cards/CardSchools";
+import CardSchools from "../../components/Cards/AdminCards/CardSchools";
 
 export default function Dashboard() {
     return (
