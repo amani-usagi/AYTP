@@ -33,6 +33,11 @@ export default function Navbar(props) {
                             <p className=" text-sm inline-block ml-2">Students</p>
                         </Link>
                     </li>
+                    <li className="flex items-center">
+                        <Link className="hover:text-gray-900 text-gray-500 px-3 py-4 lg:py-2 flex items-center text-xs  font-bold" to="/tutor/index" >
+                            <p className=" text-sm inline-block ml-2">Tutors</p>
+                        </Link>
+                    </li>
                     <li className="flex items-center border-r-2 border-black">
                         <Link to="/auth/login" className="hover:text-gray-900 text-gray-500 px-3 py-4 lg:py-2 flex items-center text-xs font-bold">
                             <i class="fas fa-sign-in-alt mr-2"></i> Sign In

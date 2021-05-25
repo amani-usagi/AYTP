@@ -13,7 +13,7 @@ export default function TransNavbar(props) {
                     Elearn Site
                 </Link>
                 <button className="cursor-pointer text-xl leading-none px-3 py-1 border border-solid border-transparent rounded bg-transparent block lg:hidden outline-none focus:outline-none" type="button" onClick={() => setNavbarOpen(!navbarOpen)}>
-                    <i className="text-white fas fa-bars"></i>
+                    <i className="text-blue-900 fas fa-bars"></i>
                 </button>
             </div>
             <div className={"lg:flex flex-grow items-center bg-white lg:bg-opacity-0 lg:shadow-none" + (navbarOpen ? " block rounded shadow-lg" : " hidden")} id="example-navbar-warning" >

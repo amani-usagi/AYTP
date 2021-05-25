@@ -13,7 +13,7 @@ import Profile from "../views/student/Profile";
 import Mail from "../views/student/Mails";
 import Courses from "../views/student/Courses";
 
-export default function Admin() {
+export default function Student() {
     return (
     <>
     <Sidebars />
