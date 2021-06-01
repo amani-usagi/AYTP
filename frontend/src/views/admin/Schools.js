@@ -2,7 +2,7 @@ import React from "react";
 
 // components
 
-import CardSchools from "../../components/Cards/AdminCards/CardSchools";
+import CardSchools from "../../components/Cards/CardSchools";
 
 export default function Schools() {
     return (

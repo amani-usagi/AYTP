@@ -13,9 +13,15 @@ export default function TutorSidebar() {
 					</Link>
 				</li>
 				<li className="my-2 md:my-0">
-					<Link className={ "block py-1 md:py-3 pl-1 align-middle " + (window.location.href.indexOf("/tutor/task") !== -1 ? "text-blue-500 hover:text-blue-500" : "text-gray-700 hover:text-gray-500") } to="/tutor/task">
-						<i className={ "fa fa-tasks mr-3 text-sm font-bold " + (window.location.href.indexOf("/tutor/task") !== -1 ? "" : "text-gray-500") } ></i>
-						<span className="w-full inline-block pt-1 md:pb-0 text-sm font-bold">Tasks</span>
+					<Link className={ "block py-1 md:py-3 pl-1 align-middle " + (window.location.href.indexOf("/tutor/dashboard") !== -1 ? "text-blue-500 hover:text-blue-500" : "text-gray-700 hover:text-gray-500") } to="/tutor/dashboard">
+						<i className={ "fas fa-tachometer-alt mr-3 text-sm font-bold " + (window.location.href.indexOf("/tutor/dashboard") !== -1 ? "" : "text-gray-500") } ></i>
+						<span className="w-full inline-block pt-1 md:pb-0 text-sm font-bold">Dashboard</span>
+					</Link>
+				</li>
+				<li className="my-2 md:my-0">
+					<Link className={ "block py-1 md:py-3 pl-1 align-middle " + (window.location.href.indexOf("/tutor/courses") !== -1 ? "text-blue-500 hover:text-blue-500" : "text-gray-700 hover:text-gray-500") } to="/tutor/courses">
+						<i className={ "fa fa-tasks	 mr-3 text-sm font-bold " + (window.location.href.indexOf("/tutor/courses") !== -1 ? "" : "text-gray-500") } ></i>
+						<span className="w-full inline-block pt-1 md:pb-0 text-sm font-bold">Courses</span>
 					</Link>
 				</li>
 				<li className="my-2 md:my-0">
@@ -35,12 +41,6 @@ export default function TutorSidebar() {
 					<Link className={ "block py-1 md:py-3 pl-1 align-middle " + (window.location.href.indexOf("/tutor/profile") !== -1 ? "text-blue-500 hover:text-blue-500" : "text-gray-700 hover:text-gray-500") } to="/tutor/profile">
 						<i className={ "fa fa-user mr-3 text-sm font-bold " + (window.location.href.indexOf("/tutor/profile") !== -1 ? "" : "text-gray-500") } ></i>
 						<span className="w-full inline-block pt-1 md:pb-0 text-sm font-bold">Profile</span>
-					</Link>
-				</li>
-				<li className="my-2 md:my-0">
-					<Link className={ "block py-1 md:py-3 pl-1 align-middle " + (window.location.href.indexOf("/tutor/settings") !== -1 ? "text-blue-500 hover:text-blue-500" : "text-gray-700 hover:text-gray-500") } to="/tutor/settings">
-						<i className={ "fa fa-cog mr-3 text-sm font-bold " + (window.location.href.indexOf("/tutor/settings") !== -1 ? "" : "text-gray-500") } ></i>
-						<span className="w-full inline-block pt-1 md:pb-0 text-sm font-bold">Settings</span>
 					</Link>
 				</li>
 				<hr className="my-4 md:min-w-full" />

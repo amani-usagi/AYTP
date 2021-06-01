@@ -1,7 +1,7 @@
 import React from "react";
 
-import CardMail from "../../components/Cards/AdminCards/CardMail";
-import CardInbox from "../../components/Cards/AdminCards/CardInbox";
+import CardMail from "../../components/Cards/CardMail";
+import CardInbox from "../../components/Cards/CardInbox";
 
 export default function Mail() {
     return (

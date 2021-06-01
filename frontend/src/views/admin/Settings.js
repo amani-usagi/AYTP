@@ -2,7 +2,7 @@ import React from "react";
 
 // components
 
-import CardSettings from "../../components/Cards/AdminCards/CardSettings";
+import CardSettings from "../../components/Cards/CardSettings";
 
 export default function Settings() {
     return (

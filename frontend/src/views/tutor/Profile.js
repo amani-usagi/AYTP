@@ -9,7 +9,7 @@ import CardSettings from "../../components/Cards/CardSettings";
 export default function Schools() {
     return (
     <>
-    <div className="flex flex-wrap -mt-14">
+    <div className="flex flex-wrap -mt-16">
         <div className="w-full xl:w-5/12 mb-12 xl:mb-0 px-4">
             <CardProfile />
         </div>

@@ -2,7 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 
 // components
-import TableDropdown from "../../Dropdowns/TableDropdown";
+import TableDropdown from "../Dropdowns/TableDropdown";
 
 export default function CardManage({ color }) {
 	return (
@@ -34,7 +34,7 @@ export default function CardManage({ color }) {
 				<tbody>
 					<tr>
 						<th className="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 text-left flex items-center">
-							<img src={require("../../../assets/img/bprofile.svg").default} className="h-12 w-12 bg-white rounded-full border" alt="..." ></img>{" "}
+							<img src={require("../../assets/img/bprofile.svg").default} className="h-12 w-12 bg-white rounded-full border" alt="..." ></img>{" "}
 							<span className={ "ml-3 font-bold " + + (color === "light" ? "text-gray-600" : "text-white") } >
 									Admin One
 							</span>
@@ -51,7 +51,7 @@ export default function CardManage({ color }) {
 					</tr>
 					<tr>
 						<th className="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 text-left flex items-center">
-							<img src={require("../../../assets/img/bprofile.svg").default} className="h-12 w-12 bg-white rounded-full border" alt="..." ></img>{" "}
+							<img src={require("../../assets/img/bprofile.svg").default} className="h-12 w-12 bg-white rounded-full border" alt="..." ></img>{" "}
 							<span className={ "ml-3 font-bold " + + (color === "light" ? "text-gray-600" : "text-white") } >
 								Admin Two
 							</span>
@@ -68,7 +68,7 @@ export default function CardManage({ color }) {
 					</tr>
 					<tr>
 						<th className="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 text-left flex items-center">
-							<img src={require("../../../assets/img/bprofile.svg").default} className="h-12 w-12 bg-white rounded-full border" alt="..." ></img>{" "}
+							<img src={require("../../assets/img/bprofile.svg").default} className="h-12 w-12 bg-white rounded-full border" alt="..." ></img>{" "}
 							<span className={ "ml-3 font-bold " + + (color === "light" ? "text-gray-600" : "text-white") } >
 								Admin Three
 							</span>
