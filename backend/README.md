@@ -1,8 +1,8 @@
-# AYTP Teaching and Learning Forum
+# AYTP Teaching and Learning Forum backend
 
 This project is built on React as a frontend and Django rest framework api as a backend application.
 
-## Project Build Process
+## Backend Build Process
 
 The front end application is done with [React](https://github.com/facebook/create-react-app) and [Tailwind CSS](https://tailwindcss.com/docs/guides/create-react-app).
 Resides in the frontend directory.
@@ -13,27 +13,34 @@ Database used for the application is [Postgres](https://www.enterprisedb.com/dow
 
 ### Configurations in settings.py
 
-Adding newly created applications
+### Adding newly created applications
 ![](/screenshots/installed_apps.png).
 
-Database configurations
+### Database configurations
+
 ![](/screenshots/database_config.png).
 
-Other settings in [settings.py](elearn/settings.py)
+### Other settings in [settings.py](elearn/settings.py)
+
 ![](/screenshots/other_settings.png).
 
 ### Configurations in [elearn/urls.py](elearn/urls.py)
 ![](/screenshots/urls_elearn.png).
 
 ## Testing APIs with Postman
-Creating new user.
+
+### Creating new user.
+
 ![](/screenshots/creating_user.JPG).
 
-Output.
+### Output.
+
 ![](/screenshots/newuser_output.PNG).
 
-Signing in with the new user credentials
+### Signing in with the new user credentials
+
 ![](/screenshots/sign_in.PNG).
 
-API output tokens to signing in
+### API output tokens to signing in
+
 ![](/screenshots/api_signin_output.PNG).
