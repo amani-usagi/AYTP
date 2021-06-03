@@ -1,6 +1,6 @@
 import React from 'react';
 
-import Navbar from "../components/Navbars/Navbar";
+import Navbar from "../components/Navbars/NavBar";
 import TransFooter from "../components/Footers/TransFooter";
 
 export default function Pricing() {

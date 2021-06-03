@@ -2,7 +2,7 @@ import React from "react";
 
 import FooterMini from "../components/Footers/FooterMini";
 import Background from "../assets/img/background.svg";
-import Navbar from "../components/Navbars/Navbar";
+import Navbar from "../components/Navbars/NavBar";
 
 function Profile() {
     return(
