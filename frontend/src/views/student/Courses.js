@@ -3,7 +3,7 @@ import React from "react";
 // components
 
 import CardProfile from "../../components/Cards/CardProfile";
-import CardSettings from "../../components/Cards/CardSettings";
+import FormSettings from "../../components/Forms/Settings";
 
 
 export default function Schools() {
@@ -14,7 +14,7 @@ export default function Schools() {
             <CardProfile />
         </div>
         <div className="w-7/12 mb-12 px-4">
-            <CardSettings />
+            <FormSettings />
         </div>
     </div>
     </>

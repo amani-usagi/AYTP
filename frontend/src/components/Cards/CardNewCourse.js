@@ -1,6 +1,8 @@
 import React from 'react';
 
-export default function CardNewCourse() {
+const CardNewCourse = (props) => {
+
+    const {id, coursename, courseno, about} = props.courses;
     return(
         <>
         <div className="relative flex flex-col min-w-0 break-words w-full mb-6 shadow-lg rounded-lg bg-gray-100 border-0 ">
@@ -15,39 +17,16 @@ export default function CardNewCourse() {
                         <i className="fa fa-tasks text-xl" aria-hidden="true"></i>
                     </div>
                     <div>
-                        <p className="mb-2 text-sm font-medium text-gray-700 dark:text-gray-400"> Course One </p>
-                        <p className="text-sm font-normal text-gray-600 dark:text-gray-200"> Details to Course one </p>
+                        <p className="mb-2 text-sm font-medium text-gray-700 dark:text-gray-400"> {coursename}</p>
+                        <span>{courseno}</span>
+                        <p className="text-sm font-normal text-gray-600 dark:text-gray-200"> {about} </p>
                     </div>
-                </div>
-                <div className="flex items-center p-4 bg-white rounded-lg shadow-xs dark:bg-gray-800">
-                    <div className="p-3 mr-4 text-white bg-blue-500 rounded-full dark:text-blue-100 dark:bg-blue-500">
-                        <i class="fa fa-folder text-xl" aria-hidden="true"></i>
-                    </div>
-                    <div>
-                        <p className="mb-2 text-sm font-medium text-gray-700 dark:text-gray-400"> Course Three </p>
-                        <p className="text-sm font-normal text-gray-600 dark:text-gray-200"> Details to Course three </p>
-                    </div>
-                </div>
-                <div className="flex items-center p-4 bg-white rounded-lg shadow-xs dark:bg-gray-800">
-                    <div className="p-3 mr-4 text-white bg-green-500 rounded-full dark:text-green-100 dark:bg-green-500">
-                        <i class="fa fa-folder-open text-xl" aria-hidden="true"></i>
-                    </div>
-                    <div>
-                        <p className="mb-2 text-sm font-medium text-gray-700 dark:text-gray-400"> Course Two </p>
-                        <p className="text-sm font-normal text-gray-600 dark:text-gray-200" > Details to Course two </p>
-                    </div>
-                </div>
-                <div className="flex items-center p-4 bg-white rounded-lg shadow-xs dark:bg-gray-800">
-                    <div className="p-3 mr-4 text-white bg-yellow-500 rounded-full dark:text-teal-100 dark:bg-teal-500">
-                        <i class="fas fa-at text-2xl" aria-hidden="true"></i>
-                    </div>
-                    <div>
-                        <p className="mb-2 text-sm font-medium text-gray-700 dark:text-gray-400"> Course Four </p>
-                        <p className="text-sm font-normal text-gray-600 dark:text-gray-200" > Details to course four </p>
-                    </div>
+                    <i className="fa fa-trash" aria-hidden="true" onClick={() => props.clickHandler(id)} style={{color: "red"}}></i>
                 </div>
             </div>
         </div>
         </>
     );
 }
+
+export default CardNewCourse;

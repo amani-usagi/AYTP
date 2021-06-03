@@ -2,7 +2,7 @@ import React from "react";
 
 // components
 
-import CardSettings from "../components/Cards/CardSettings";
+import FormSetting from "../components/Forms/Settings";
 import CardProfile from "../components/Cards/CardProfile";
 
 export default function Settings() {
@@ -10,7 +10,7 @@ export default function Settings() {
     <>
     <div className="flex flex-wrap">
         <div className="w-full lg:w-8/12 px-4">
-            <CardSettings />
+            <FormSetting />
         </div>
         <div className="w-full lg:w-4/12 px-4">
             <CardProfile />
