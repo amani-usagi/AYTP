@@ -4,8 +4,8 @@ import { uuid } from 'uuidv4';
 // components
 
 import AddAdmin from "../../components/Forms/AddAdmin";
-import AdminList from '../../components/Listings/AdminList';
 import CardManage from '../../components/Cards/CardManage';
+import AdminTable from "../../components/Tables/AdminTable";
 
  function Manage() {
 
@@ -35,10 +35,12 @@ import CardManage from '../../components/Cards/CardManage';
 
     return (
     <>
-    <div className="flex flex-wrap -mt-16">
+    <div className="flex flex-wrap ">
         <div className="w-full xl:w-7/12 mb-12 xl:mb-0 px-4">
             <CardManage>
-                <AdminList admins={admins} getAdminId={removeAdminHandler}/>
+                {admins.map((a)=>{
+                   return <AdminTable admin={a} removeAdmin={removeAdminHandler} />
+                })}
             </CardManage>
         </div>
         <div className="w-full xl:w-5/12 mb-12 xl:mb-0 px-4">
