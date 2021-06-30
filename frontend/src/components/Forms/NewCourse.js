@@ -2,19 +2,19 @@ import React from 'react';
 
 class NewCourse extends React.Component {
     state = {
-        coursename: "",
-        courseno: "",
+        cname: "",
+        cnumber: "",
         about: "",
     };
 
-    add = (event) => {
-        event.preventDefault();
-        if(this.state.coursename === "" || this.state.courseno === "" || this.state.about === "") {
+    add = (e) => {
+        e.preventDefault();
+        if(this.state.cname === "" || this.state.cnumber === "" || this.state.about === "") {
             alert("Fill out the empty fields!");
             return
         };
         this.props.addCourseHandler(this.state);
-        this.setState( {coursename: "", courseno: "", about: ""} );
+        this.setState( {cname: "", cnumber : "", about: ""} );
     };
     render() {
         return (
@@ -32,7 +32,7 @@ class NewCourse extends React.Component {
                                     <label className="block uppercase text-gray-500 text-xs font-bold mb-2" htmlFor="grid-password">
                                         Course Name
                                     </label>
-                                    <input type="text" name="coursename" className="border-0 px-3 py-3 placeholder-gray-300 text-gray-500 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150" value={this.state.coursename} onChange={(event) => this.setState({coursename: event.target.value})}/>
+                                    <input type="text" name="coursename" className="border-0 px-3 py-3 placeholder-gray-300 text-gray-500 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150" value={this.state.cname} onChange={(e) => this.setState({cname: e.target.value})}/>
                                 </div>
                             </div>
                             <div className="w-full px-1">
@@ -40,7 +40,7 @@ class NewCourse extends React.Component {
                                     <label className="block uppercase text-gray-500 text-xs font-bold mb-2" htmlFor="grid-password">
                                         Course Number
                                     </label>
-                                    <input type="number" name="courseno" className="border-0 px-3 py-3 placeholder-gray-300 text-gray-500 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150" value={this.state.courseno} onChange={(event) => this.setState({courseno: event.target.value})}/>
+                                    <input type="number" name="courseno" className="border-0 px-3 py-3 placeholder-gray-300 text-gray-500 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150" value={this.state.cnumber} onChange={(e) => this.setState({cnumber: e.target.value})}/>
                                 </div>
                             </div>
                             <div className="w-full px-1">
@@ -48,7 +48,7 @@ class NewCourse extends React.Component {
                                     <label className="block uppercase text-gray-500 text-xs font-bold mb-2" htmlFor="grid-password">
                                         About
                                     </label>
-                                    <textarea type="number" name="courseno" className="border-0 px-3 py-3 placeholder-gray-300 text-gray-500 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150" value={this.state.about} onChange={(event) => this.setState({about: event.target.value})}/>
+                                    <textarea type="number" name="courseno" className="border-0 px-3 py-3 placeholder-gray-300 text-gray-500 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150" value={this.state.about} onChange={(e) => this.setState({about: e.target.value})}/>
                                 </div>
                             </div>
                         </div>

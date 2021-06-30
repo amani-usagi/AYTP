@@ -1,10 +1,10 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 
 // components
-
 import CardSchools from "../../components/Cards/CardSchools";
 
 export default function Dashboard() {
+
     return (
     <>
     <div className="flex flex-wrap">

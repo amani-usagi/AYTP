@@ -12,20 +12,24 @@ import HeaderStats from "../components/Headers/StudentHeader";
 import Profile from "../views/student/Profile";
 import Mail from "../views/student/Mails";
 import Courses from "../views/student/Courses";
+import Payment from "../views/student/payment";
+import Dashboard from "../views/student/dashboard";
 
 export default function Student() {
     return (
     <>
-    <Sidebars />
-    <div className="relative md:ml-64 bg-white">
-        <StudentNav />
-        <HeaderStats />
-        <div className="px-4 md:px-10 mx-auto w-full -m-24">
+    <div className="flex h-screen relative">
+        <Sidebars />
+        <div className="w-1/2 lg:w-full flex-1 mx-auto pl-16 flex-row">
+            <StudentNav />
+            <HeaderStats />
             <Switch>
                 <Route path="/student/profile" exact component={Profile} />
                 <Route path="/student/mail" exact component={Mail} />
                 <Route path="/student/courses" exact component={Courses} />
-                <Redirect from="/student" to="/student/index" />
+                <Route path="/student/payment" exact component={Payment} />
+                <Route path="/student/dashboard" exact component={Dashboard} />
+                <Redirect from="/student" to="/student/dashboard" />
             </Switch>
             <TransFooter/>
         </div>

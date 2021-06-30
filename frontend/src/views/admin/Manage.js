@@ -2,10 +2,9 @@ import React, { useState, useEffect } from "react";
 import { uuid } from 'uuidv4';
 
 // components
-
 import AddAdmin from "../../components/Forms/AddAdmin";
 import CardManage from '../../components/Cards/CardManage';
-import AdminTable from "../../components/Tables/AdminTable";
+import AdminTile from "../../components/Tables/AdminTile";
 
  function Manage() {
 
@@ -38,8 +37,8 @@ import AdminTable from "../../components/Tables/AdminTable";
     <div className="flex flex-wrap ">
         <div className="w-full xl:w-7/12 mb-12 xl:mb-0 px-4">
             <CardManage>
-                {admins.map((a)=>{
-                   return <AdminTable admin={a} removeAdmin={removeAdminHandler} />
+                {admins.map((a) => {
+                   return <AdminTile admin={a} removeAdmin={removeAdminHandler} />
                 })}
             </CardManage>
         </div>

@@ -2,19 +2,23 @@ import React from "react";
 
 // components
 
-import CardProfile from "../../components/Cards/CardProfile";
-import FormSettings from "../../components/Forms/Settings";
+import CardCourses from '../../components/Cards/CardNewCourse'
+import CardEnrolledCourses from "../../components/Cards/CardEnrolledCourses";
 
-
-export default function Schools() {
+export default function Dashboard() {
     return (
     <>
-    <div className="flex flex-wrap mt-4">
-        <div className="w-5/12 mb-12 px-4">
-            <CardProfile />
+    <div className="flex flex-wrap -mt-16">
+        <div className="w-full xl:w-9/12 mb-12 xl:mb-0 px-4">
+            <CardEnrolledCourses />
         </div>
-        <div className="w-7/12 mb-12 px-4">
-            <FormSettings />
+        <div className="w-full xl:w-9/12 mb-12 xl:mb-0 px-4">
+            <CardEnrolledCourses />
+        </div>
+        <div className="w-full xl:w-9/12 mb-12 xl:mb-0 px-4">
+            <CardCourses>
+                
+            </CardCourses>
         </div>
     </div>
     </>
