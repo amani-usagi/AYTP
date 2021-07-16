@@ -1,7 +1,48 @@
-import React from "react";
+import React, { Component } from "react";
 import { Link } from "react-router-dom";
 
-export default function Login() {
+class App extends Component {
+    state = {
+      response: '',
+      post: '',
+      responseToPost: '',
+    };
+    
+    componentDidMount() {
+      this.callApi()
+        .then(res => this.setState({ response: res.express }))
+        .catch(err => console.log(err));
+    }
+    
+    callApi = async () => {
+      const response = await fetch('http://localhost:4000/auth/login');
+      const body = await response.json();
+      if (response.status !== 200) throw Error(body.message);
+      
+      return body;
+    };
+    
+    handleSubmit = async e => {
+      e.preventDefault();
+      const response = await fetch('http://localhost:4000/auth/login', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Accept': 'application/json, text/plain, */*',
+        },
+        body: JSON.stringify({ 
+            'email':'',
+            'password':'',
+            'role':'',
+         }),
+      });
+      const body = await response.text();
+      
+      this.setState({ responseToPost: body });
+      
+    };
+    
+  render() {
     return (
     <>
     <div className="container mx-auto px-4 h-full">
@@ -26,12 +67,13 @@ export default function Login() {
                         <div className="text-gray-400 text-center mb-3 font-bold">
                             <small>Or sign in with credentials</small>
                         </div>
-                        <form>
+                        <p>{this.state.response}</p>
+                        <form onSubmit={this.handleSubmit}>
                             <div className="relative w-full mb-3">
                                 <label className="block  text-gray-600 text-sm font-bold mb-2" htmlFor="grid-password">
                                     Email
                                 </label>
-                                <input type="email" className="border-0 px-3 py-3 placeholder-gray-300 text-gray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150" placeholder="Email" />
+                                <input type="email"  className="border-0 px-3 py-3 placeholder-gray-300 text-gray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150" placeholder="Email"  />
                             </div>
                             <div className="relative w-full mb-3">
                                 <label className="block  text-gray-600 text-sm font-bold mb-2" htmlFor="grid-password" >
@@ -39,18 +81,25 @@ export default function Login() {
                                 </label>
                                 <input type="password" className="border-0 px-3 py-3 placeholder-gray-300 text-gray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150" placeholder="Password" />
                             </div>
+                            <div className="relative w-full mb-3">
+                                <label className="block  text-gray-600 text-sm font-bold mb-2" htmlFor="grid-password" >
+                                    Role
+                                </label>
+                                <input type="text" className="border-0 px-3 py-3 placeholder-gray-300 text-gray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150" placeholder="Role" />
+                            </div>
                             <div>
                                 <label className="inline-flex items-center cursor-pointer">
-                                    <input id="customCheckLogin" type="checkbox" className="form-checkbox border-0 rounded text-gray-700 ml-1 w-5 h-5 ease-linear transition-all duration-150"/>
+                                    <input id="customCheckLogin" type="checkbox" className="form-checkbox border-0 rounded text-gray-700 ml-1 w-5 h-5 ease-linear transition-all duration-150" />
                                     <span className="ml-2 text-sm font-semibold text-gray-500"> Remember me </span>
                                 </label>
                             </div>
                             <div className="text-center mt-6">
-                                <button className="bg-blue-500 hover:bg-blue-900 text-white active:bg-gray-600 text-sm font-bold uppercase px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 w-full ease-linear transition-all duration-150"type="button">
+                                <button className="bg-blue-500 hover:bg-blue-900 text-white active:bg-gray-600 text-sm font-bold uppercase px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 w-full ease-linear transition-all duration-150" type="submit">
                                     Sign In
                                 </button>
                             </div>
                         </form>
+                        <p>{this.state.responseToPost}</p>
                     </div>
                 </div>
                 <div className="flex flex-wrap mt-6 relative">
@@ -71,3 +120,5 @@ export default function Login() {
     </>
     );
 }
+}
+export default App;
