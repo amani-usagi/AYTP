@@ -6,6 +6,9 @@ class App extends Component {
       response: '',
       post: '',
       responseToPost: '',
+      email:'',
+      password:'',
+      role:'',
     };
     
     componentDidMount() {
@@ -15,12 +18,13 @@ class App extends Component {
     }
     
     callApi = async () => {
-      const response = await fetch('http://localhost:4000/auth/login');
+      const response = await fetch();
       const body = await response.json();
       if (response.status !== 200) throw Error(body.message);
       
       return body;
     };
+
     
     handleSubmit = async e => {
       e.preventDefault();
@@ -31,9 +35,9 @@ class App extends Component {
           'Accept': 'application/json, text/plain, */*',
         },
         body: JSON.stringify({ 
-            'email':'',
-            'password':'',
-            'role':'',
+            'email':this.state.email,
+            'password':this.state.password,
+            'role':this.state.role,
          }),
       });
       const body = await response.text();
@@ -73,19 +77,19 @@ class App extends Component {
                                 <label className="block  text-gray-600 text-sm font-bold mb-2" htmlFor="grid-password">
                                     Email
                                 </label>
-                                <input type="email"  className="border-0 px-3 py-3 placeholder-gray-300 text-gray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150" placeholder="Email"  />
+                                <input type="email"  value={this.state.email} onChange={e => this.setState({ email: e.target.value })} className="border-0 px-3 py-3 placeholder-gray-300 text-gray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150" placeholder="Email"  />
                             </div>
                             <div className="relative w-full mb-3">
                                 <label className="block  text-gray-600 text-sm font-bold mb-2" htmlFor="grid-password" >
                                     Password
                                 </label>
-                                <input type="password" className="border-0 px-3 py-3 placeholder-gray-300 text-gray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150" placeholder="Password" />
+                                <input type="password" value={this.state.password} onChange={e => this.setState({ password: e.target.value })}   className="border-0 px-3 py-3 placeholder-gray-300 text-gray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150" placeholder="Password" />
                             </div>
                             <div className="relative w-full mb-3">
                                 <label className="block  text-gray-600 text-sm font-bold mb-2" htmlFor="grid-password" >
                                     Role
                                 </label>
-                                <input type="text" className="border-0 px-3 py-3 placeholder-gray-300 text-gray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150" placeholder="Role" />
+                                <input type="text"  value={this.state.role} onChange={e => this.setState({ role: e.target.value })} className="border-0 px-3 py-3 placeholder-gray-300 text-gray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150" placeholder="Role" />
                             </div>
                             <div>
                                 <label className="inline-flex items-center cursor-pointer">
