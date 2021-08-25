@@ -4,7 +4,7 @@ import { Switch, Route, Redirect } from "react-router-dom";
 // components
 
 import AdminNavbar from "../components/Navbars/AdminNavbar";
-import SideBar from "../components/Sidebars/SideBar";
+import SideBar from "../components/Sidebars/AdminSideBar";
 import HeaderStats from "../components/Headers/HeaderStats";
 import TransFooter from "../components/Footers/TransFooter";
 

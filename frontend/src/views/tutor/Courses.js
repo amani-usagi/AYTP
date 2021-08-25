@@ -2,8 +2,8 @@ import React from "react";
 
 // components
 
-import CardEnrolledCourses from "../../components/Cards/CardEnrolledCourses";
-import CardSettings from "../../components/Cards/CardSettings";
+import EnrolledCourses from "../../components/Cards/EnrolledCourses";
+import Settings from "../../components/Cards/Settings";
 
 
 export default function Schools() {
@@ -11,10 +11,10 @@ export default function Schools() {
     <>
     <div className="flex flex-wrap -mt-16">
         <div className="w-full xl:w-8/12 mb-12 px-4">
-            <CardEnrolledCourses />
+            <EnrolledCourses />
         </div>
         <div className="w-full lg:w-4/12 mb-12 px-4">
-            <CardSettings />
+            <Settings />
         </div>
     </div>
     </>

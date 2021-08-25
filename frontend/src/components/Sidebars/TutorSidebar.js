@@ -36,11 +36,23 @@ export default function TutorSidebar() {
 						<span className="w-full inline-block pt-1 md:pb-0 text-sm font-bold">Payments</span>
 					</Link>
 				</li>
+				<li className="my-2 md:my-0">
+					<Link className={ "block py-1 md:py-3 pl-1 align-middle " + (window.location.href.indexOf("/tutor/school") !== -1 ? "text-blue-500 hover:text-blue-500" : "text-gray-700 hover:text-gray-500") } to="/tutor/school">
+						<i className={ "fa fa-school mr-3 text-sm font-bold " + (window.location.href.indexOf("/tutor/school") !== -1 ? "" : "text-gray-500") } ></i>
+						<span className="w-full inline-block pt-1 md:pb-0 text-sm font-bold">School</span>
+					</Link>
+				</li>
 				<hr className="my-4 md:min-w-full" />
                 <li className="my-2 md:my-0">
 					<Link className={ "block py-1 md:py-3 pl-1 align-middle " + (window.location.href.indexOf("/tutor/profile") !== -1 ? "text-blue-500 hover:text-blue-500" : "text-gray-700 hover:text-gray-500") } to="/tutor/profile">
 						<i className={ "fa fa-user mr-3 text-sm font-bold " + (window.location.href.indexOf("/tutor/profile") !== -1 ? "" : "text-gray-500") } ></i>
 						<span className="w-full inline-block pt-1 md:pb-0 text-sm font-bold">Profile</span>
+					</Link>
+				</li>
+				<li className="my-2 md:my-0">
+					<Link className={ "block py-1 md:py-3 pl-1 align-middle " + (window.location.href.indexOf("/tutor/setting") !== -1 ? "text-blue-500 hover:text-blue-500" : "text-gray-700 hover:text-gray-500") } to="/tutor/setting">
+						<i className={ "fa fa-cog mr-3 text-sm font-bold " + (window.location.href.indexOf("/tutor/setting") !== -1 ? "" : "text-gray-500") } ></i>
+						<span className="w-full inline-block pt-1 md:pb-0 text-sm font-bold">Settings</span>
 					</Link>
 				</li>
 				<hr className="my-4 md:min-w-full" />

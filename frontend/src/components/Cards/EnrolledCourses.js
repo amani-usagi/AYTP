@@ -1,12 +1,12 @@
 import React from 'react';
 
-export default function CardTask() {
+export default function EnrolledCourse() {
     return(
         <>
-        <div className="relative flex flex-col min-w-0 break-words w-full mb-6 shadow-lg rounded-lg bg-gray-50 border-0">
-            <div className="rounded-t bg-gray-50 mb-0 px-6 py-6">
+        <div className="relative flex flex-col min-w-0 break-words w-full mb-6 shadow-lg rounded-lg bg-gray-100 border-0">
+            <div className="rounded-t bg-gray-100 mb-0 px-6 py-6">
                 <div className="text-center flex justify-between">
-                    <h6 className="text-gray-900 text-xl font-bold">Tasks</h6>
+                    <h6 className="text-gray-900 text-xl font-bold">Your Courses</h6>
                 </div>
             </div>
             <div className="grid gap-6 mb-8 md:grid-cols-2 xl:grid-cols-4 px-4">

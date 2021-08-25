@@ -4,7 +4,7 @@ import { Switch, Route, Redirect } from "react-router-dom";
 // components
 
 import StudentNav from "../components/Navbars/StudentNav";
-import Sidebars from "../components/Sidebars/Sidebars";
+import Sidebar from "../components/Sidebars/StudentSidebar";
 import TransFooter from "../components/Footers/TransFooter";
 import HeaderStats from "../components/Headers/StudentHeader";
 
@@ -12,19 +12,26 @@ import HeaderStats from "../components/Headers/StudentHeader";
 import Profile from "../views/student/Profile";
 import Mail from "../views/student/Mails";
 import Courses from "../views/student/Courses";
+import Pay from "../views/student/pay";
+import Inbox from "../views/student/Inbox";
+import NewCourse from "../views/student/NewCourse";
+
 
 export default function Student() {
     return (
     <>
-    <Sidebars />
+    <Sidebar />
     <div className="relative md:ml-64 bg-white">
         <StudentNav />
         <HeaderStats />
-        <div className="px-4 md:px-10 mx-auto w-full -m-24">
+        <div className="mx-auto w-full -m-24">
             <Switch>
                 <Route path="/student/profile" exact component={Profile} />
                 <Route path="/student/mail" exact component={Mail} />
                 <Route path="/student/courses" exact component={Courses} />
+                <Route path="/student/pay" exact component={Pay} />
+                <Route path="/student/inbox" exact component={Inbox} />
+                <Route path="/student/newcourse" exact component={NewCourse} />
                 <Redirect from="/student" to="/student/index" />
             </Switch>
             <TransFooter/>

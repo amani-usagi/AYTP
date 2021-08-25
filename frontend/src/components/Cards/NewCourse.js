@@ -1,6 +1,6 @@
 import React from 'react';
 
-export default function CardNewCourse() {
+export default function NewCourse() {
     return(
         <>
         <div className="relative flex flex-col min-w-0 break-words w-full mb-6 shadow-lg rounded-lg bg-gray-100 border-0 ">
@@ -10,7 +10,7 @@ export default function CardNewCourse() {
                 </div>
             </div>
             <div className="grid gap-6 mb-8 md:grid-cols-2 xl:grid-cols-4 px-4">
-                <div className="flex items-center p-4 bg-white rounded-lg shadow-xs dark:bg-gray-800">
+                <div className="flex items-center p-4 bg-white rounded-lg shadow-xs dark:bg-gray-800 cursor-pointer transition duration-100 ease-in-out">
                     <div className="p-3 mr-4 text-white bg-red-500 rounded-full dark:text-orange-100 dark:bg-orange-500">
                         <i className="fa fa-tasks text-xl" aria-hidden="true"></i>
                     </div>

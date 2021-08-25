@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-export default function CardInbox({ color }) {
+export default function Inbox({ color }) {
 	return (
     <>
     <div className={ "relative flex flex-col min-w-0 break-words w-full mb-6 shadow-lg rounded " + (color === "light" ? "bg-white" : "bg-blue-900 text-white") } >
@@ -15,17 +15,23 @@ export default function CardInbox({ color }) {
         	</div>
     	</div>
 		<div className="block w-full overflow-x-auto">
-			
+			<table className="items-center w-full bg-transparent border-collapse">
+				<tbody>
+					<tr>
+						<th></th>
+					</tr>
+				</tbody>
+			</table>
 		</div>
     </div>
     </>
 	);
 }
 
-CardInbox.defaultProps = {
+Inbox.defaultProps = {
   color: "light",
 };
 
-CardInbox.propTypes = {
+Inbox.propTypes = {
   color: PropTypes.oneOf(["light", "dark"]),
 };

@@ -5,7 +5,7 @@ import PropTypes from "prop-types";
 
 import TableDropdown from "../Dropdowns/TableDropdown";
 
-export default function CardSchools({ color }) {
+export default function Schools({ color }) {
 	return (
     <>
     <div className={ "relative flex flex-col min-w-0 break-words w-full mb-6 shadow-lg rounded " + (color === "light" ? "bg-white" : "bg-blue-900 text-white") } >
@@ -151,10 +151,10 @@ export default function CardSchools({ color }) {
 	);
 }
 
-CardSchools.defaultProps = {
+Schools.defaultProps = {
   color: "light",
 };
 
-CardSchools.propTypes = {
+Schools.propTypes = {
   color: PropTypes.oneOf(["light", "dark"]),
 };

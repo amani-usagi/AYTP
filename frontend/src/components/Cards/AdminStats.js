@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-export default function CardStats({
+export default function AdminStats({
     statSubtitle,
     statTitle,
     statIconName,
@@ -32,14 +32,14 @@ export default function CardStats({
     );
 }
 
-CardStats.defaultProps = {
+AdminStats.defaultProps = {
     statSubtitle: "Traffic",
     statTitle: "350,897",
     statIconName: "far fa-chart-bar",
     statIconColor: "bg-red-500",
 };
 
-CardStats.propTypes = {
+AdminStats.propTypes = {
     statSubtitle: PropTypes.string,
     statTitle: PropTypes.string,
     statIconName: PropTypes.string,

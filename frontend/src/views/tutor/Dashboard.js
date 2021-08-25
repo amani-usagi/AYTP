@@ -2,22 +2,22 @@ import React from "react";
 
 // components
 
-import CardTask from "../../components/Cards/CardTask";
-import CardNewCourse from "../../components/Cards/CardNewCourse";
-import CardEnrolledCourses from "../../components/Cards/CardEnrolledCourses";
+import Task from "../../components/Cards/Task";
+import NewCourse from "../../components/Cards/NewCourse";
+import EnrolledCourses from "../../components/Cards/EnrolledCourses";
 
 export default function Dashboard() {
     return (
     <>
     <div className="flex flex-wrap -mt-16">
         <div className="w-full xl:w-9/12 mb-12 xl:mb-0 px-4">
-            <CardTask />
+            <Task />
         </div>
         <div className="w-full xl:w-9/12 mb-12 xl:mb-0 px-4">
-            <CardEnrolledCourses />
+            <EnrolledCourses />
         </div>
         <div className="w-full xl:w-9/12 mb-12 xl:mb-0 px-4">
-            <CardNewCourse />
+            <NewCourse />
         </div>
     </div>
     </>

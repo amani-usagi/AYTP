@@ -25,9 +25,9 @@ export default function Sidebar() {
                 </li>
             </ul>
             <hr className="my-4 md:min-w-full" />
-            <button className="w-full bg-blue-500 text-white cta-btn font-semibold py-2 mt-5 rounded-br-lg rounded-bl-lg rounded-tr-lg shadow-lg hover:shadow-xl hover:bg-blue-900 flex items-center justify-center">
-                <i className="fas fa-plus mr-3"></i> Enroll new course
-            </button>
+            <Link to="/student/newcourse" className="w-full bg-blue-500 text-white cta-btn font-semibold py-2 mt-5 rounded-br-lg rounded-bl-lg rounded-tr-lg shadow-lg hover:shadow-xl hover:bg-blue-900 flex items-center justify-center">
+                <i className="fas fa-plus mr-3"></i>New course
+            </Link>
             <div className={ "md:flex md:flex-col md:items-stretch md:opacity-100 md:relative md:mt-4 md:shadow-none shadow absolute top-0 left-0 right-0 z-40 overflow-y-auto overflow-x-hidden h-auto items-center flex-1 rounded " + collapseShow }>
                 <div className="md:min-w-full md:hidden block pb-4 mb-4 border-b border-solid border-gray-200">
                     <div className="flex flex-wrap">

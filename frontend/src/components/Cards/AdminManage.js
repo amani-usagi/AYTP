@@ -4,7 +4,7 @@ import PropTypes from "prop-types";
 // components
 import TableDropdown from "../Dropdowns/TableDropdown";
 
-export default function CardManage({ color }) {
+export default function AdminManage({ color }) {
 	return (
     <>
     <div className={ "relative flex flex-col min-w-0 break-words w-8/12 mb-6 shadow-lg rounded " + (color === "light" ? "bg-white" : "bg-blue-900 text-white") } >
@@ -91,10 +91,10 @@ export default function CardManage({ color }) {
 	);
 }
 
-CardManage.defaultProps = {
+AdminManage.defaultProps = {
   color: "light",
 };
 
-CardManage.propTypes = {
+AdminManage.propTypes = {
   color: PropTypes.oneOf(["light", "dark"]),
 };

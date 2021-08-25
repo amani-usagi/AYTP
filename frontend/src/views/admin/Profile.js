@@ -2,8 +2,8 @@ import React from "react";
 
 // components
 
-import CardProfile from "../../components/Cards/CardProfile";
-import CardSettings from "../../components/Cards/CardSettings";
+import CardProfile from "../../components/Cards/Profile";
+import CardSettings from "../../components/Cards/Settings";
 
 
 export default function Schools() {

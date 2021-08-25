@@ -13,6 +13,7 @@ import Profile from "../views/tutor/Profile";
 import Dashboard from "../views/tutor/Dashboard";
 import Mail from "../views/tutor/Mails";
 import Courses from "../views/tutor/Courses";
+import Settings from "../views/tutor/Settings";
 
 export default function Tutors() {
     return (
@@ -27,6 +28,7 @@ export default function Tutors() {
                     <Route path="/tutor/mail" exact component={Mail} />
                     <Route path="/tutor/dashboard" exact component={Dashboard} />
                     <Route path="/tutor/courses" exact component={Courses} />
+                    <Route path="/tutor/setting" exact component={Settings} />
                     <Redirect from="/tutor" to="/tutor/dashboard"/>
                 </Switch>
                 <Footer />
