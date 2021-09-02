@@ -12,7 +12,7 @@ export default function Mail() {
                     <div className="text-center flex justify-between">
                         <h6 className="text-gray-900 text-xl font-bold">Mails</h6>
                         <Link to="/student/inbox" className="bg-blue-500 text-white hover:bg-blue-900 font-bold text-xs px-4 py-2 rounded shadow hover:shadow-md outline-none focus:outline-none mr-1 ease-linear transition-all duration-150" type="button">
-                            <i class="fa fa-envelope mr-2" aria-hidden="true"></i>Inbox
+                            <i className="fa fa-envelope mr-2" aria-hidden="true"></i>Inbox
                         </Link>
                     </div>
                 </div>
@@ -63,10 +63,10 @@ export default function Mail() {
                     </form>
                     <div className="flex justify-center ">
                         <button className="bg-blue-500 text-white hover:bg-blue-900 font-bold text-xs px-4 py-2 rounded shadow hover:shadow-md outline-none focus:outline-none mr-1 ease-linear transition-all duration-150" type="button">
-                            <i class="fa fa-paper-plane mr-2" aria-hidden="true"></i> Send
+                            <i className="fa fa-paper-plane mr-2" aria-hidden="true"></i> Send
                         </button>
                         <button className="bg-red-500 text-white hover:bg-red-700 font-bold text-xs px-4 py-2 rounded shadow hover:shadow-md outline-none focus:outline-none mr-1 ease-linear transition-all duration-150" type="button">
-                            <i class="fa fa-trash mr-2" aria-hidden="true"></i> Discard
+                            <i className="fa fa-trash mr-2" aria-hidden="true"></i> Discard
                         </button>
                     </div>
                 </div>

@@ -21,7 +21,7 @@ export default function Task() {
                 </div>
                 <div className="flex items-center p-4 bg-white rounded-lg shadow-xs dark:bg-gray-800">
                     <div className="p-3 mr-4 text-white bg-blue-500 rounded-full dark:text-blue-100 dark:bg-blue-500">
-                        <i class="fa fa-folder text-xl" aria-hidden="true"></i>
+                        <i className="fa fa-folder text-xl" aria-hidden="true"></i>
                     </div>
                     <div>
                         <p className="mb-2 text-sm font-medium text-gray-700 dark:text-gray-400"> Task Three </p>
@@ -30,7 +30,7 @@ export default function Task() {
                 </div>
                 <div className="flex items-center p-4 bg-white rounded-lg shadow-xs dark:bg-gray-800">
                     <div className="p-3 mr-4 text-white bg-green-500 rounded-full dark:text-green-100 dark:bg-green-500">
-                        <i class="fa fa-folder-open text-xl" aria-hidden="true"></i>
+                        <i className="fa fa-folder-open text-xl" aria-hidden="true"></i>
                     </div>
                     <div>
                         <p className="mb-2 text-sm font-medium text-gray-700 dark:text-gray-400"> Task Two </p>
@@ -39,7 +39,7 @@ export default function Task() {
                 </div>
                 <div className="flex items-center p-4 bg-white rounded-lg shadow-xs dark:bg-gray-800">
                     <div className="p-3 mr-4 text-white bg-yellow-500 rounded-full dark:text-teal-100 dark:bg-teal-500">
-                        <i class="fas fa-at text-2xl" aria-hidden="true"></i>
+                        <i className="fas fa-at text-2xl" aria-hidden="true"></i>
                     </div>
                     <div>
                         <p className="mb-2 text-sm font-medium text-gray-700 dark:text-gray-400"> Task Four </p>

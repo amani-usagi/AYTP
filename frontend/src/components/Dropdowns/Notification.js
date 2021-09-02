@@ -32,7 +32,7 @@ return (
         </a>
         <div className="h-0 my-2 border border-solid border-gray-100" />
         <a  href="#action" className={ "text-sm py-2 px-4 font-semibold block w-full whitespace-nowrap bg-transparent text-gray-900" } onClick={(e) => e.preventDefault()} >
-            <i class="fa fa-wrench mr-2" aria-hidden="true"></i>Separate Link
+            <i className="fa fa-wrench mr-2" aria-hidden="true"></i>Separate Link
         </a>
     </div>
     </>
