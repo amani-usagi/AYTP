@@ -3,8 +3,11 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import './App.css';
 import "@fortawesome/fontawesome-free/css/all.min.css";
-import reportWebVitals from './reportWebVitals';
 import { BrowserRouter, Route, Switch, Redirect } from "react-router-dom";
+
+//Partical Views
+import { StudentRegister } from './views/registrations/studentRegister';
+import { TutorRegistration } from './views/registrations/TutorRegistration';
 
 // Layouts
 import Auth from "./layouts/Auth";
@@ -16,11 +19,15 @@ import Tutor from "./layouts/Tutors";
 import Landing from "./views/Landing";
 import Profile from "./views/Profile";
 import Pricing from "./views/Pricing";
+import Login from './views/auth/Login';
 
 
 ReactDOM.render(
 	<BrowserRouter>
 		<Switch>
+			<Route path="/login/:type" component={Login} />
+			<Route path="/register/student" component={StudentRegister} />
+			<Route path="/register/tutor" component={TutorRegistration} />
 			<Route path="/auth" component={Auth} />
 			<Route path="/student" component={Student} />
 			<Route path="/admin" component={Admin} />
