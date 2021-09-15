@@ -1,0 +1,46 @@
+.App {
+  text-align: center;
+}
+
+.gradient {
+  background: linear-gradient(90deg, #187BCD 0%, #21D4FD 100%);
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 1px white;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #187BCD;
+  border-radius: 1px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #21D4FD;
+}
+
+#sidebar {
+  transition: ease-in-out all .3s;
+  z-index: 9999;
+}
+
+#sidebar span {
+  opacity: 0;
+  position: absolute;
+  /* transition: ease-in-out all .1s; */
+}
+
+#sidebar:hover {
+  width: 150px;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+  /*shadow-2xl*/
+}
+
+#sidebar:hover span {
+  opacity: 1;
+}
