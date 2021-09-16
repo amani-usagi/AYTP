@@ -1,18 +1,19 @@
 import React,{useState} from "react";
-import { Link ,useParams } from "react-router-dom";
+import { Link ,useParams, useHistory } from "react-router-dom";
 import { API_URL } from "../../config";
 import TransNavbar from "../../components/Navbars/TransNavbar";
 import TransFooter from "../../components/Footers/TransFooter";
 
 export default function Login() {
    let title= "";
-  //let history = useHistory()
-  const AdminLoginrequest = (username, password) => async (e) => {
-    let url = `${API_URL}/admin/login`
+   let history = useHistory()
+  const AdminLoginrequest = (email, password) => async (e) => {
+    let url = `${API_URL}/auth/login`
     e.preventDefault();
     let query = {
-      username: username,
+      email: email,
       password: password,
+      role:'ADMIN'
     };
     const headers = {
       method: "POST",
@@ -26,15 +27,23 @@ export default function Login() {
     const response = await fetch(url,headers);
     const data = await response.json();
     alert(data.message);
-   // history.push("/admin dashboard")
+    
+    var astatus = (data.status);
+    if (astatus === 0 ){
+      history.push("/admin/dashboard")
+    }
+    else{
+      history.push("/login/admin")
+    }
   };
 
-  const TutorLoginrequest = (username, password) => async (e) => {
-    let url = `${API_URL}/tutor/login`
+  const TutorLoginrequest = (email, password) => async (e) => {
+    let url = `${API_URL}/auth/login`
     e.preventDefault();
     let query = {
-      username: username,
+      email: email,
       password: password,
+      role:'TUTOR'
     };
     const headers = {
       method: "POST",
@@ -47,15 +56,24 @@ export default function Login() {
     alert(JSON.stringify(query) + url)
     const response = await fetch(url,headers);
     const data = await response.json();
-    alert(data.message);
+    alert(JSON.stringify(data));
+    
+    var tstatus = (data.status);
+    if (tstatus === 0 ){
+      history.push("/tutor/dashboard")
+    }
+    else{
+      history.push("/login/tutor")
+    }
   };
 
-  const StudentLoginrequest = (username, password) => async (e) => {
-    let url = `${API_URL}/student/login`
+  const StudentLoginrequest = (email, password) => async (e) => {
+    let url = `${API_URL}/auth/login`
     e.preventDefault();
     let query = {
-      username: username,
+      email: email,
       password: password,
+      role:'STUDENT'
     };
     const headers = {
       method: "POST",
@@ -68,7 +86,16 @@ export default function Login() {
     alert(JSON.stringify(query) + url)
     const response = await fetch(url,headers);
     const data = await response.json();
-    alert(data.message);
+    alert(JSON.stringify(data));
+    
+    var sstatus = (data.status);
+    if (sstatus === 0 ){
+      history.push("/student/dashboard")
+    }
+    else{
+      history.push("/login/student")
+    }
+
   };
 
   let [ email,setEmail] = useState("");
