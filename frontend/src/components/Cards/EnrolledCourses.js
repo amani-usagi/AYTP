@@ -1,25 +1,23 @@
-import React,{useState} from "react";
-import { Link ,useParams, useHistory } from "react-router-dom";
-import { API_URL } from "../../config";
+import React from "react";
+// import { API_URL } from "../../config";
+// import { getUserToken } from "../../services/authenticationService";
 
 
 export default function Mycourses() {
-    let title= "";
-    //let history = useHistory()
-   const studentcourses = (email, password) => async (e) => {
-     let url = `${API_URL}/student/mycourses`
-     e.preventDefault();
+//    const studentcourses = (email, password) => async (e) => {
+//      let url = `${API_URL}/student/mycourses`
+//      e.preventDefault();
      
-     const headers = {
-       method: "GET",
-       headers: {
-         "Content-Type": "application/json",
-       },
-       body: JSON.stringify(),
-     };
+//      const headers = {
+//        method: "GET",
+//        headers: {
+//          "Content-Type": "application/json",
+//          "Token":getUserToken()
+//        },
+//        body: JSON.stringify(),
+//      };
  
-     
-   };
+//    };
     return(
         <>
         <div className="relative flex flex-col min-w-0 break-words w-full mb-6 shadow-lg rounded-lg bg-gray-100 border-0">

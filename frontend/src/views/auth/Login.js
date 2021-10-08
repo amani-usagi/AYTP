@@ -1,8 +1,9 @@
 import React,{useState} from "react";
-import { Link ,useParams, useHistory } from "react-router-dom";
 import { API_URL } from "../../config";
+import { Link ,useParams, useHistory } from "react-router-dom";
 import TransNavbar from "../../components/Navbars/TransNavbar";
 import TransFooter from "../../components/Footers/TransFooter";
+import { storeTokens } from "../../services/authenticationService";
 
 export default function Login() {
    let title= "";
@@ -23,17 +24,21 @@ export default function Login() {
       body: JSON.stringify(query),
     };
 
-    alert(JSON.stringify(query) + url)
-    const response = await fetch(url,headers);
-    const data = await response.json();
-    alert(data.message);
-    
-    var astatus = (data.status);
-    if (astatus === 0 ){
-      history.push("/admin/dashboard")
-    }
-    else{
-      history.push("/login/admin")
+    try{
+      const response = await fetch(url,headers);
+      const data = await response.json();
+      alert(data.message);
+      
+      var astatus = (data.status);
+      if (astatus === 0 ){
+        storeTokens(data.access_token,data.refresh_token)
+        history.push("/admin/dashboard")
+      }
+      else{
+        history.push("/login/admin")
+      }
+    }catch(err){
+      console.log(err)
     }
   };
 
@@ -52,22 +57,26 @@ export default function Login() {
       },
       body: JSON.stringify(query),
     };
-
-    alert(JSON.stringify(query) + url)
-    const response = await fetch(url,headers);
-    const data = await response.json();
-    alert(JSON.stringify(data));
-    
-    var tstatus = (data.status);
-    if (tstatus === 0 ){
-      history.push("/tutor/dashboard")
-    }
-    else{
-      history.push("/login/tutor")
+    try{
+      const response = await fetch(url,headers);
+      const data = await response.json();
+      alert(JSON.stringify(data));
+      
+      var tstatus = (data.status);
+      if (tstatus === 0 ){
+        storeTokens(data.access_token,data.refresh_token)
+        history.push("/tutor/dashboard")
+      }
+      else{
+        history.push("/login/tutor")
+      }
+    }catch(err){
+      console.log(err)
     }
   };
 
   const StudentLoginrequest = (email, password) => async (e) => {
+
     let url = `${API_URL}/auth/login`
     e.preventDefault();
     let query = {
@@ -83,18 +92,23 @@ export default function Login() {
       body: JSON.stringify(query),
     };
 
-    alert(JSON.stringify(query) + url)
-    const response = await fetch(url,headers);
-    const data = await response.json();
-    alert(JSON.stringify(data));
-    
-    var sstatus = (data.status);
-    if (sstatus === 0 ){
-      history.push("/student/dashboard")
-    }
-    else{
-      history.push("/login/student")
-    }
+    try{
+      const response = await fetch(url,headers);
+      const data = await response.json();
+      alert(JSON.stringify(data));
+        history.push("/tutor/dashboard")
+      
+      var sstatus = (data.status);
+      if (sstatus === 0 ){
+        storeTokens(data.access_token,data.refresh_token)
+        history.push("/student/dashboard")
+      }
+      else{
+        history.push("/login/student")
+      }}
+      catch(err){
+        console.log(err)
+      }
 
   };
 
