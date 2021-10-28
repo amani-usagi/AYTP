@@ -1,25 +1,81 @@
-import React from "react";
-// import { API_URL } from "../../config";
-// import { getUserToken } from "../../services/authenticationService";
+import React, { useEffect, useState } from "react";
+import { API_URL } from "../../config";
+import { getUserToken } from "../../services/authenticationService";
+
+function Courses(props) {
+    let EnrolmentID = props.EnrolmentID;
+    let CourseID = props.CourseID;
+    let CourseName = props.CourseName;
+    let CourseDescription = props.CourseDescription;
+    return (
+      <>              
+            
+          <table>
+        <tr>
+            <th>Course EnrolmentID</th>
+            <br></br>
+            <br></br>
+            <th>Course ID</th>
+            <br></br>
+            <br></br>
+            <th>Course Name</th>
+            <br></br>
+            <br></br>
+            <th>Course Description</th>
+            <br></br>
+            <br></br>
+        </tr>
+<div className="w-full md:w-1/4 p-3 flex flex-strech">
+          <div className="flex flex-col flex-strech w-full h-full">
+        <tr>
+            <td>
+                <p className="text-black text-2xl font-bold text-center my-4"> {EnrolmentID}</p>
+            </td>
+            
+            <td>
+                <p className="text-black text-center">{CourseID}</p>
+            </td>
+
+            <td>
+                <p className="text-black text-center">{CourseName}</p>
+            </td>
+
+            <td>
+                <p className="text-black text-center">{CourseDescription}</p>
+            </td>
+
+        </tr>
+            
+          </div>
+        </div>
+        </table>
+      </>
+    );
+  }    
+
+  export default function Mycourses() {
+    const [mycourse, setCourse] = useState([]);
+    useEffect(() => {
+        let url = `${API_URL}/student/mycourses`
+    const headers = {
+        method: "GET",
+        headers: {
+            "Content-Type": "application/json",
+            Token:getUserToken(),
+        },
+        };
+      fetch(url, headers)
+        .then((response) => response.json())
+        .then((d) => {
+          setCourse(d);
+        });
+    }, []);
 
 
-export default function Mycourses() {
-//    const studentcourses = (email, password) => async (e) => {
-//      let url = `${API_URL}/student/mycourses`
-//      e.preventDefault();
-     
-//      const headers = {
-//        method: "GET",
-//        headers: {
-//          "Content-Type": "application/json",
-//          "Token":getUserToken()
-//        },
-//        body: JSON.stringify(),
-//      };
- 
-//    };
     return(
+
         <>
+        
         <div className="relative flex flex-col min-w-0 break-words w-full mb-6 shadow-lg rounded-lg bg-gray-100 border-0">
             <div className="rounded-t bg-gray-100 mb-0 px-6 py-6">
                 <div className="text-center flex justify-between">
@@ -51,7 +107,7 @@ export default function Mycourses() {
                     </div>
                     <div>
                         <p className="mb-2 text-sm font-medium text-gray-700 dark:text-gray-400"> Task Two </p>
-                        <p className="text-sm font-normal text-gray-600 dark:text-gray-200" > Details to task two </p>
+                        <p className="text-sm font-normal text-gray-600 dark:text-gray-200" > Details to task two  </p>
                     </div>
                 </div>
                 <div className="flex items-center p-4 bg-white rounded-lg shadow-xs dark:bg-gray-800">
@@ -65,6 +121,27 @@ export default function Mycourses() {
                 </div>
             </div>
         </div>
+        <section>
+        <div>
+          
+
+        {mycourse.map((value, index) =>{
+          return (
+            <div key={index}>
+                {/* {JSON.stringify(value)} */}
+                <div>
+                    {value.CourseName}
+                    {value.CourseDescription}
+
+
+                </div>
+            </div>
+          );
+        })}
+
+      </div>
+    </section>
+  
         </>
     );
 }
